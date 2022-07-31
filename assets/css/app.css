@@ -467,6 +467,7 @@ body {
 @media (max-width: 576px) {
   .main__container {
     max-width: 576px;
+    width: 100%;
   }
 }
 
@@ -543,7 +544,7 @@ body {
 }
 @media (max-width: 1024px) {
   .container__content .container__content-item {
-    width: 45%;
+    width: 100%;
     margin-top: 20px;
   }
 }
