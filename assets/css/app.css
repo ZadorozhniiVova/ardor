@@ -577,6 +577,13 @@ body {
 .container__content .content__box ~ .content__box {
   margin-top: 20px;
 }
+.container__content .content__box .content__slider {
+  min-width: 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .container__content .content__box-title {
   color: black;
   text-transform: uppercase;
@@ -615,6 +622,12 @@ body {
 .container__content .content__box-title__text {
   text-align: center;
 }
+.container__content .content {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  height: 500px;
+}
 .container__content .container__content-item {
   width: 23%;
   position: relative;
@@ -640,7 +653,7 @@ body {
   }
 }
 .container__content .container__content-item .container__content-link {
-  position: relative;
+  position: absolute;
   overflow: hidden;
   width: 100%;
   min-height: 300px;
@@ -649,13 +662,16 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  opacity: 1;
+  z-index: 1;
 }
-.container__content .container__content-item .container__content-link:hover .content__link-bg {
-  transform: scale(1.15);
-  -webkit-transform: scale(1.15);
-  -moz-transform: scale(1.15);
-  -ms-transform: scale(1.15);
-  -o-transform: scale(1.15);
+.container__content .container__content-item .container__content-link:hover {
+  opacity: 0;
 }
 .container__content .container__content-item .container__content-link .content__link-bg {
   position: relative;
@@ -674,7 +690,7 @@ body {
 }
 .container__content .container__content-item .container__content-link .content__link-text {
   color: #FFFFFF;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   bottom: 20px;
   transition: all 0.5s ease;
@@ -684,6 +700,7 @@ body {
   -o-transition: all 0.5s ease;
   text-transform: uppercase;
   font-size: 15px;
+  z-index: 1;
 }
 .container__content .container__content-item .container__content-link .content__link-text:hover {
   font-size: 20px;
